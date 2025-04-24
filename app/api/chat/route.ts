@@ -11,8 +11,8 @@ import { experimental_createMCPClient as createMCPClient, MCPTransport } from 'a
 import { Experimental_StdioMCPTransport as StdioMCPTransport } from 'ai/mcp-stdio';
 import { spawn } from "child_process";
 
-// Allow streaming responses up to 30 seconds
-export const maxDuration = 120;
+// Allow streaming responses up to 60 seconds (max for Vercel hobby plan)
+export const maxDuration = 60;
 
 interface KeyValuePair {
   key: string;
